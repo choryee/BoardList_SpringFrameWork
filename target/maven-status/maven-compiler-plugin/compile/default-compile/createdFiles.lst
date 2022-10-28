@@ -1,0 +1,11 @@
+com\chori\springStudy\dao\BoardDAO.class
+com\chori\springStudy\dao\BoardDAOImpl.class
+com\chori\springStudy\repository\UserRepository.class
+com\chori\springStudy\controller\BoardController.class
+com\chori\springStudy\model\Reply.class
+com\chori\springStudy\service\BoardServiceImpl.class
+com\chori\springStudy\model\BoardVO.class
+com\chori\springStudy\model\User.class
+com\chori\springStudy\service\BoardService.class
+com\chori\springStudy\hello\HelloController.class
+com\chori\springStudy\model\Board.class

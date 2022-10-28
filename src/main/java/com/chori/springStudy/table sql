@@ -1,0 +1,11 @@
+create table tbl_board(
+bid int auto_increment comment '일련번호' primary key,
+cate_cd varchar(20) null comment '게시글 카테고리',
+title varchar(200) null comment '제목',
+content text null comment '게시글',
+tag varchar(1000) null comment '태그',
+view_cnt int default 0 null comment '카운트',
+reg_id varchar(45) null comment '작성자',
+reg_dt date null comment '작성일',
+edit_dt date null comment '수정일'
+);
