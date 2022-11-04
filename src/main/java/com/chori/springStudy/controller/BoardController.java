@@ -62,7 +62,7 @@ public class BoardController {
         return "board/boardForm";
     }
 
-    @RequestMapping(value = "/saveBoard", method = RequestMethod.POST)
+    @RequestMapping(value = "/saveBoard", method = RequestMethod.POST) //post 매핑은 redirect를 생각해야. 안 그러면, 글 도배할 수도 있다.
     public String saveBoard(@ModelAttribute("BoardVO") BoardVO boardVO, RedirectAttributes rttr) throws Exception {
         boardService.insertBoard(boardVO);
         return "redirect:/board/getBoardList"; // 이건 폴더밑 경로가 아니라, 컨트롤러 상의 경로임.

@@ -81,6 +81,13 @@
     </tbody>
 </table>
 </div>
+
+<ul>
+   <c:forTokens var="item" items="사과,포도,바나나,수박,딸기" delims=",">
+       <li>(forTokens 테스트) 과일 : ${item}</li>
+   </c:forTokens>
+</ul>
+
 <div >	<button type="button" class="btn btn-sm btn-primary" id="btnWriteForm">글쓰기</button>		</div>
 </div>
 

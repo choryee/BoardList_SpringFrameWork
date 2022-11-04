@@ -1,0 +1,8 @@
+
+http://localhost:8080/board/getBoardList
+
+resources/spring에 밑에 설정함.
+dataSource-context.xml
+dispatcher-servlet.xml
+mybatis-context.xml
+root-context.xml

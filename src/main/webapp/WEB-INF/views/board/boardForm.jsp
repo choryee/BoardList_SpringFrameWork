@@ -15,7 +15,6 @@
     <script>
         $(document).on('click', '#btnSave', function(e){
             e.preventDefault();
-
         $("#form").submit();
         });
 
