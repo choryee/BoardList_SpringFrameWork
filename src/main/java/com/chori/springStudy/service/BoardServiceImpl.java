@@ -25,10 +25,16 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public BoardVO getBoardContent(int bid) throws Exception {
-        return null;
+        boardDAO.updateViewCnt(bid); //조회수 증가
+        return boardDAO.getBoardContent(bid); // 게시물 읽어오기
     }
 
-//    @Override
+    @Override
+    public BoardVO detailBoard(int bid) throws Exception {
+        return boardDAO.detailBoard(bid);
+    }
+
+    //    @Override
 //    public int insertBoard(BoardVO boardVO) throws Exception {
 //        return boardDAO.insertBoard(boardVO);
 //    }
@@ -47,7 +53,7 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public int deleteBoard(int bid) throws Exception {
-        return 0;
+        return boardDAO.deleteBoard(bid);
     }
 
     @Override

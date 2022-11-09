@@ -1,9 +1,0 @@
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:12:29 +0900] "GET /board/getBoardList HTTP/1.1" 200 4684 http-bio-8080-exec-2 2639
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:12:29 +0900] "GET /resources/common/css/common.css HTTP/1.1" 404 949 http-bio-8080-exec-3 9
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:12:30 +0900] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-4 2
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:43:04 +0900] "GET /board/boardForm HTTP/1.1" 200 2367 http-bio-8080-exec-6 202
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:43:04 +0900] "GET /resources/common/css/common.css HTTP/1.1" 404 949 http-bio-8080-exec-7 2
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:43:08 +0900] "GET /board/getBoardList HTTP/1.1" 200 4684 http-bio-8080-exec-8 97
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:43:08 +0900] "GET /resources/common/css/common.css HTTP/1.1" 404 949 http-bio-8080-exec-10 2
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:43:51 +0900] "GET /board/getBoardList HTTP/1.1" 200 4794 http-bio-8080-exec-10 359
-0:0:0:0:0:0:0:1 - - [04/Nov/2022:09:43:51 +0900] "GET /resources/common/css/common.css HTTP/1.1" 404 949 http-bio-8080-exec-10 1

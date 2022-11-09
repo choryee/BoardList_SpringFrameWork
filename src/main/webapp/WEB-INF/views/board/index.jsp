@@ -13,17 +13,19 @@
 
 
     <script>
-        $(document).on('click', '#btnWriteForm', function(e){
+     $(document).on('click', '#btnWriteForm', function(e){
             e.preventDefault();
-            location.href = "${pageContext.request.contextPath}/board/boardForm";	});
-    </script>
+            location.href = "${pageContext.request.contextPath}/board/boardForm";
+        });
 
-<script>
-    $(document).on('click', '#btnWriteForm', function(e){
-	e.preventDefault();
-	location.href = "${pageContext.request.contextPath}/board/boardForm";
-		});</script>
+    function fn_contentView(bid){
+		var url = "${pageContext.request.contextPath}/board/getBoardContent";
+		url = url + "?bid="+bid;
+		location.href = url;
+	}
 
+
+  </script>
 </head>
 
 
@@ -67,7 +69,9 @@
             <c:forEach var="list" items="${boardList}">
                 <tr align="center">
                     <td><c:out value="${list.bid}"/></td>
-                    <td><c:out value="${list.title}"/></td>
+                    <td>
+                      <a href="#" onClick="fn_contentView(<c:out value="${list.bid}"/>)"> <c:out value="${list.title}"/> </a>
+                    </td>
                     <td><c:out value="${list.content}"/></td>
                     <td><c:out value="${list.reg_id}"/></td>
                     <td><c:out value="${list.view_cnt}"/></td>

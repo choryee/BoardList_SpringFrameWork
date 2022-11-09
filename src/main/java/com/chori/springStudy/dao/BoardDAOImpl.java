@@ -28,6 +28,10 @@ public class BoardDAOImpl implements BoardDAO {
         return sqlSession.selectOne("com.chori.springStudy.boardMapper.getBoardContent", bid);
     }
 
+    public BoardVO detailBoard(int bid) throws Exception{
+        return sqlSession.selectOne("com.chori.springStudy.boardMapper.detailBoard", bid);
+    }
+
     public int insertBoard(BoardVO boardVO) throws Exception {
         return sqlSession.insert("com.chori.springStudy.boardMapper.insertBoard", boardVO);
     }
@@ -37,7 +41,7 @@ public class BoardDAOImpl implements BoardDAO {
     }
 
     public int deleteBoard(int bid) throws Exception {
-        return sqlSession.insert("com.chori.springStudy.boardMapper.deleteBoard", bid);
+        return sqlSession.delete("com.chori.springStudy.boardMapper.deleteBoard", bid);
     }
 
     public int updateViewCnt(int bid) throws Exception {

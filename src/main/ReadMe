@@ -1,3 +1,7 @@
+
+HeidiSql에서 root로 로그인
+mydb/tbl_board
+
 create table tbl_board(
   bid      int auto_increment comment '일련번호' primary key,
   cate_cd  varchar(20)   not null comment '게시글 카테고리',
@@ -10,6 +14,7 @@ create table tbl_board(
   edit_dt  date          not null comment '수정일'
 );
 
+첨에는 spring framework .xml세팅 헤매다가 hello world찍는 거 한후, 게시판 만들기 이어서 하고 있음.
 
 http://localhost:8080/board/getBoardList
 

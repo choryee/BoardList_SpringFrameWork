@@ -9,6 +9,8 @@ public interface BoardDAO {
     public List<BoardVO> getBoardList() throws Exception;
 
     public BoardVO getBoardContent(int bid) throws Exception;
+    public BoardVO detailBoard(int bid) throws Exception;
+
 
     public int insertBoard(BoardVO boardVO) throws Exception;
 
