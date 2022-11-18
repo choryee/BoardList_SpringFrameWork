@@ -1,2 +1,9 @@
-0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:38:10 +0900] "GET /login HTTP/1.1" 404 - http-bio-8080-exec-2 0
-0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:38:17 +0900] "GET /login HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:43 +0900] "GET /loginPage HTTP/1.1" 404 949 http-bio-8080-exec-1 1119
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:43 +0900] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-3 4
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:45 +0900] "GET /login?error HTTP/1.1" 200 437 http-bio-8080-exec-4 700
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:47 +0900] "GET /login?error HTTP/1.1" 200 437 http-bio-8080-exec-5 6
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:49 +0900] "GET /login?error HTTP/1.1" 200 437 http-bio-8080-exec-6 4
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:53 +0900] "GET /board/getBoardList HTTP/1.1" 200 3341 http-bio-8080-exec-7 1210
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:58 +0900] "GET /board/getBoardList HTTP/1.1" 200 3341 http-bio-8080-exec-2 57
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:58 +0900] "GET /resources/common1/common.css HTTP/1.1" 404 949 http-bio-8080-exec-10 5
+0:0:0:0:0:0:0:1 - - [18/Nov/2022:17:57:58 +0900] "GET /resources/common1/common.css HTTP/1.1" 404 949 http-bio-8080-exec-10 3
