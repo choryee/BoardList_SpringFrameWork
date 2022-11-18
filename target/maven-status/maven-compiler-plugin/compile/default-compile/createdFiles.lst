@@ -7,7 +7,6 @@ com\chori\springStudy\service\dao\TicketDAO.class
 com\chori\springStudy\model\Reply.class
 com\chori\springStudy\member\Audience.class
 com\chori\springStudy\member\Bag.class
-com\chori\springStudy\member\Test.class
 com\chori\springStudy\member\Ticket.class
 com\chori\springStudy\service\BoardServiceImpl.class
 com\chori\springStudy\model\BoardVO.class
@@ -20,7 +19,9 @@ com\chori\springStudy\dao\BoardDAO.class
 com\chori\springStudy\dao\BoardDAOImpl.class
 com\chori\springStudy\TheaterVO\People.class
 com\chori\springStudy\repository\UserRepository.class
+com\chori\springStudy\member\TestTicket.class
 com\chori\springStudy\service\impl\TicketService.class
+com\chori\springStudy\controller\HomeController.class
 com\chori\springStudy\service\BoardService.class
 com\chori\springStudy\controller\TicketController.class
 com\chori\springStudy\service\impl\TicketServiceImpl.class
