@@ -25,4 +25,10 @@ public class BoardVO {
     //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     public String edit_dt;
+
+    private String filename;
+    private String filepath;
+
+
+
 }

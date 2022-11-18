@@ -1,0 +1,27 @@
+
+board list
+<form id="searchForm" action="<c:url value='/board/list.do'>" method="get">
+ <input type="hidden" name="pageNo" value="${searchVO.pageNo}"/>
+
+  <div class="searchBox">
+    <ul>
+      <li>
+        <select id="searchUse" name="use">
+          <option value="" selected>전체</option>
+          <option value="y" <c:if test="${searchVO.use eq y}">selected</c:if>>사용중</option>
+
+        </select>
+      </li>
+      </ul>
+
+</form>
+
+	$('#btnSend').on('click', function(e){
+	e.preventDefault();
+	 $('#ticketForm').submit();
+	})
+
+	    $(document).on('click', '#btnSend', function(e){
+                e.preventDefault();
+            $("#ticketForm").submit();
+            });

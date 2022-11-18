@@ -31,7 +31,7 @@
     <div class="container" role="main">
         <h2>board Form</h2>
 
-        <form name="form" id="form" role="form" method="post" action="${pageContext.request.contextPath}/board/saveBoard">
+        <form name="form" id="form" role="form" method="post" action="${pageContext.request.contextPath}/board/saveBoard" enc-type="multipart/form-data">
             <div class="mb-3">
                 <label for="title">제목</label>
                 <input type="text" class="form-control" name="title" id="title" placeholder="제목을 입력해 주세요">
@@ -51,6 +51,11 @@
                 <label for="tag">TAG</label>
                 <input type="text" class="form-control" name="tag" id="tag" placeholder="태그를 입력해 주세요">
             </div>
+            <div class="mb-3">
+
+               <input type="file">
+             </div>
+
 
         </form>
         <div >

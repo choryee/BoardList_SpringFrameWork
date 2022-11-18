@@ -35,6 +35,9 @@
 
 <div class="container">
 <h2>board list</h2>
+
+
+
 <div class="table-responsive">
 
 <table class="table table-striped table-sm" border="2px">

@@ -1,0 +1,51 @@
+
+Banner.java
+@Getter  @Setter
+@ToString
+public class Banner { //17개 필드
+	private Integer RNUM;
+
+	private Integer id;
+	private String title;
+	private String contents;
+	private String link;
+
+	    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
+	    @DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDateTime regDate;
+
+	    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
+	    @DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate startDate;
+
+    	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
+	    @DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate endDate;
+
+
+	private Boolean dateUsed;
+	private Integer imageId;
+	private Boolean bannerUsed;
+	private Boolean popupUsed;
+	private Integer positionX;
+	private Integer positionY;
+	private Integer ordering;
+	private String userId;
+	private String userName;
+}
+---------------------------------------------------
+BannerSearchVO.java
+
+@Getter  @Setter
+@ToString
+public class BannerSearchVO extends SearchVO {// 5개 필드
+
+	private String startDate;
+	private String endDate;
+	private String use;
+	private String today = LocalDate.now().format(DateTimeFormatter.ISO_LOCAL_DATE);
+	private String type;
+}
+----------------------------------------------------
+board_banner sql 스키마(16개 열)
+id, title, contents, link, reg_date, start_date, end_date, date_used, banner_used, popup_used, image_id, position_x, position_y, ordering, user_id, user_name

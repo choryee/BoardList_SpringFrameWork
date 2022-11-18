@@ -11,8 +11,30 @@
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
         </context:component-scan>
 
+        <context:component-scan base-package="com.brian.theater">
+                <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+                <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+                <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+        </context:component-scan>
+
         <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/></bean>
-        </beans>
+
+
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+<property name="defaultEncoding" value="utf-8"></property>
+<!-- 1024 * 1024 * 10 bytes  10MB -->
+<property name="maxUploadSize" value="104857560"></property>
+<!-- 1024 * 1024 * 2 bytes  2MB -->
+<property name="maxUploadSizePerFile" value="2097152"></property>
+<property name="uploadTempDir" value ="file:/C:/Program Downloads_brian/upload"></property>
+<property name="maxInMemorySize" value="10485756"></property>
+</bean>
+
+        <mvc:default-servlet-handler/>
+
+</beans>
+
+

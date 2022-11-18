@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
 
-       <title>board</title>
+       <title>board 내가 만든 것.</title>
 
     <script>
         $(document).on('click', '#btnSave', function(e){

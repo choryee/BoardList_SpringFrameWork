@@ -23,11 +23,7 @@
             location.href="${pageContext.request.contextPath}/board/getBoardList";
         });
 
-         function fn_contentView(bid){
-        		var url = "${pageContext.request.contextPath}/board/updateBoard";
-        		url = url + "?bid="+bid;
-        		location.href = url;
-        	}
+
 
         	$(document).ready(function(){
             		var mode = '<c:out value="${mode}"/>';

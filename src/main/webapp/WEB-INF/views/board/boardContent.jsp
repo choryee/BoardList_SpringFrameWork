@@ -18,6 +18,10 @@
     		location.href = "${pageContext.request.contextPath}/board/getBoardList";
        	});
 
+    $(document).on('click', '#btnTicket', function(){
+       		location.href = "${pageContext.request.contextPath}/board/ticketList";
+               	});
+
 
 	$(document).on('click', '#btnUpdate', function(){
 	var url="${pageContext.request.contextPath}/board/editForm";
@@ -58,8 +62,9 @@
 
 			<div style="margin-top : 20px">
                 <button type="button" class="btn btn-sm btn-primary" id="btnUpdate" onclick="<c:out value="${boardContent.bid}"/>">수정	</button>
-				<button type="button" class="btn btn-sm btn-primary" id="btnDelete" onclick="<c:out value="${boardContent.bid}"/>">삭제</button>
+				<button type="button" class="btn btn-sm btn-info" id="btnDelete" onclick="<c:out value="${boardContent.bid}"/>">삭제</button>
 				<button type="button" class="btn btn-sm btn-warning" id="btnList">목록</button>
+				<button type="button" class="btn btn-sm btn-warning" id="btnTicket">티켓</button>
 			</div>
 
 		</div>

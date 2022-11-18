@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.chori.springStudy.boardMapper">
+
+
+    <select id="getBoardList" resultType="com.chori.springStudy.model.BoardVO">
+        SELECT
+        BID, CATE_CD, TITLE, CONTENT, TAG, VIEW_CNT, REG_ID, REG_DT, EDIT_DT
+        FROM
+        TBL_BOARD
+    </select>
+
+
+    <select id="getBoardContent" resultType="com.chori.springStudy.model.BoardVO"
+            parameterType="com.chori.springStudy.model.BoardVO">
+        SELECT
+        BID, CATE_CD, TITLE, CONTENT, TAG, VIEW_CNT, REG_ID, REG_DT, EDIT_DT
+        FROM
+        TBL_BOARD
+        WHERE
+        BID = #{bid}
+    </select>
+
+
+    <insert id="insertBoard" parameterType="com.chori.springStudy.model.BoardVO">
+        INSERT INTO TBL_BOARD (CATE_CD, TITLE, CONTENT, TAG, VIEW_CNT, REG_ID, REG_DT, EDIT_DT)
+        VALUES (
+        #{cate_cd}
+        , #{title}
+        , #{content}
+        , #{tag}
+        , 0
+        , #{reg_id}
+        , now()
+        , now()
+        )
+    </insert>
+
+    <select id="detailBoard" parameterType="com.chori.springStudy.model.BoardVO"
+            resultType="com.chori.springStudy.model.BoardVO">
+        select
+        BID, CATE_CD, TITLE, CONTENT, TAG, VIEW_CNT, REG_ID, REG_DT, EDIT_DT
+        from tbl_board
+        where
+        BID = #{bid}
+    </select>
+
+    <update id="updateBoard" parameterType="com.chori.springStudy.model.BoardVO">
+        UPDATE TBL_BOARD SET
+        CATE_CD = #{cate_cd}
+        , TITLE = #{title}
+        , reg_id= #{reg_id}
+        , CONTENT = #{content}
+        , TAG = #{tag}
+        , EDIT_DT = now()
+        WHERE
+        BID = ${bid}
+    </update>
+
+
+    <delete id="deleteBoard" parameterType="int">
+        DELETE FROM TBL_BOARD
+        WHERE BID = #{bid}
+    </delete>
+
+
+    <update id="updateViewCnt" parameterType="com.chori.springStudy.model.BoardVO">
+        UPDATE TBL_BOARD SET
+        VIEW_CNT = VIEW_CNT + 1
+        WHERE
+        BID = #{bid}
+    </update>
+
+</mapper>

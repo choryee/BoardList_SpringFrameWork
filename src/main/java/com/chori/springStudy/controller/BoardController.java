@@ -1,9 +1,7 @@
 package com.chori.springStudy.controller;
 
-import com.chori.springStudy.dao.BoardDAOImpl;
 import com.chori.springStudy.model.BoardVO;
 import com.chori.springStudy.service.BoardService;
-import com.chori.springStudy.service.BoardServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +21,23 @@ public class BoardController {
     private final BoardService boardService;
 
 
-   // http://localhost:8080/board/getBoardList
+
+
+    // http://localhost:8080/board/getBoardList
+//    @RequestMapping(value = "/getBoardList", method = RequestMethod.GET)
+//    public String getBoardList(Model model) throws Exception {
+////        BoardDAOImpl dao=new BoardDAOImpl();
+////        System.out.println("here============");
+////       List<BoardVO> list= dao.getBoardList();
+////        System.out.println(list.size());
+//        List<BoardVO> bList=boardService.getBoardList();
+//
+//        model.addAttribute("boardList", bList);
+//        return "board/index";
+//    }
+
+
+    // http://localhost:8080/board/getBoardList
     @RequestMapping(value = "/getBoardList", method = RequestMethod.GET)
     public String getBoardList(Model model) throws Exception {
 //        BoardDAOImpl dao=new BoardDAOImpl();
@@ -33,8 +47,15 @@ public class BoardController {
         List<BoardVO> bList=boardService.getBoardList();
 
         model.addAttribute("boardList", bList);
-        return "board/index";
+       return "board/index";
+       // return "board/theaterList";
     }
+
+    @RequestMapping("/ticketList")
+    public String ticket(){
+        return "board/theaterList";
+    }
+
 
 
     // http://localhost:8080/board/insertBoard
@@ -54,7 +75,6 @@ public class BoardController {
 //      System.out.println("tag : "+boardVO.getTag()+"content :" + boardVO.getContent() + ", " + "title :" + boardVO.getTitle());
 //        return dao.insertBoard(boardVO);
 //}
-
 
 
     @RequestMapping("/boardForm")
@@ -114,6 +134,7 @@ public class BoardController {
 
     @RequestMapping(value = "/editForm", method = RequestMethod.GET)
     public String editForm(@RequestParam("bid") int bid, @RequestParam("mode") String mode, Model model) throws Exception {
+        System.out.println("=============bid=>"+bid);
 
         model.addAttribute("boardContent", boardService.getBoardContent(bid));
         model.addAttribute("mode", mode);
@@ -125,7 +146,7 @@ public class BoardController {
 
 
     @RequestMapping(value = "/updateBoard", method = RequestMethod.POST)
-    public String updateBoard(@ModelAttribute("boardVO")BoardVO boardVO, @RequestParam("mode") String mode, RedirectAttributes rttr) throws Exception{
+    public String updateBoard(@ModelAttribute("boardVO")BoardVO boardVO, @RequestParam("mode") String mode, @RequestParam("bid") int bid) throws Exception{
         boardService.updateBoard(boardVO);
         return "redirect:/board/getBoardList";
     }
