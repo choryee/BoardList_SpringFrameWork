@@ -1,5 +1,11 @@
 package com.chori.springStudy.member;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+@Getter @Setter
 public class Bag { // 금액, 초대장, 티켓(금액, 티켓수, 총액) 유무.
     private int amount;
     private Invitation invitation;
@@ -15,6 +21,8 @@ public class Bag { // 금액, 초대장, 티켓(금액, 티켓수, 총액) 유�
         this.invitation = invitation;
         this.amount = amount;
     }
+
+
 
     public boolean hasInvitation() {
         return invitation != null;

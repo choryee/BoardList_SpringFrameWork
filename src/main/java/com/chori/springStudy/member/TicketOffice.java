@@ -13,7 +13,7 @@ public class TicketOffice { //금액조정, 티켓수 조정.
         this.tickets.addAll(Arrays.asList(tickets));
     }
 
-    public Ticket getTicket(){
+    public Ticket getTicket(){ //초대장받고, 대신 티켓은 하나 줄어드는 것.
         return tickets.remove(0);
     }
 

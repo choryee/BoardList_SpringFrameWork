@@ -20,7 +20,7 @@ public class UploadController {
 
     @RequestMapping(value = "/board/uploadForm", method = RequestMethod.GET)
     public String uploadFormGET(Ticket ticket) {
-        System.out.println("ticket.getNumber()=====>"+ticket.getNumber());
+       // System.out.println("ticket.getNumber()=====>"+ticket.getNumber());
 
 
     logger.info("=============>>>>>>>>>>>>>upload GET.....");
