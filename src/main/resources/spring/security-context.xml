@@ -8,7 +8,7 @@
              http://www.springframework.org/schema/security/spring-security.xsd">
 
     <http auto-config="true" use-expressions="false">
-
+       <!-- <intercept-url pattern="/**" access="hasAnyRole"/> 이거 주석처리해서 시큐리티 안 됨.현재-->
 
         <form-login login-page="/login"
                 username-parameter="id"

@@ -16,6 +16,7 @@ create table tbl_board(
 
 첨에는 spring framework .xml세팅 헤매다가 hello world찍는 거 한후, 게시판 만들기 이어서 하고 있음.
 
+-주소-
 http://localhost:8080/board/getBoardList
 
 ----------------------

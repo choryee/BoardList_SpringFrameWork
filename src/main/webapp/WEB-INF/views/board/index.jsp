@@ -18,12 +18,23 @@
             location.href = "${pageContext.request.contextPath}/board/boardForm";
         });
 
+     function getcontextPath(){
+         var hostIndex=location.href.index(location.host) + location.host.length;
+         var contextPath=location.href.substring(hostIndex, location.href.index('/', hostIndex+1));
+
+         console.log('contextPath>>>>', contextPath)
+          return contextPath;
+        }
+
+
+    console.log('location.href>>>>' + location.href);
+    <!--location.href는 http://http://localhost:8080/board/getBoardList 가짐 -->
+
     function fn_contentView(bid){
 		var url = "${pageContext.request.contextPath}/board/getBoardContent";
 		url = url + "?bid="+bid;
 		location.href = url;
 	}
-
 
   </script>
 </head>

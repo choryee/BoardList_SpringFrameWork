@@ -21,6 +21,7 @@ com\chori\springStudy\TheaterVO\People.class
 com\chori\springStudy\repository\UserRepository.class
 com\chori\springStudy\member\TestTicket.class
 com\chori\springStudy\service\impl\TicketService.class
+com\chori\springStudy\model\ArrayTest.class
 com\chori\springStudy\controller\HomeController.class
 com\chori\springStudy\service\BoardService.class
 com\chori\springStudy\controller\TicketController.class
