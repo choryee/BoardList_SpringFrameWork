@@ -71,7 +71,8 @@
 			<div class="bg-white rounded shadow-sm">
 				<div class="board_title">제목 : <c:out value="${boardContent.title}"/></div>
 				<div class="board_info_box">
-					<span class="board_author">글쓴이 : <c:out value="${boardContent.reg_id}"/> , </span><span class="board_date">작성일자 : <c:out value="${boardContent.reg_dt}"/></span>
+					<span class="board_author">글쓴이 : <c:out value="${boardContent.reg_id}"/> ,
+					</span><span class="board_date">작성일자 : <c:out value="${boardContent.reg_dt}"/></span>
 
 				</div>
 				<div class="board_content">내 용 : ${boardContent.content}</div>
@@ -81,8 +82,11 @@
 			<div style="margin-top : 20px">
                 <button type="button" class="btn btn-sm btn-primary" id="btnUpdate" onclick="<c:out value="${boardContent.bid}"/>">수정	</button>
 				<button type="button" class="btn btn-sm btn-info" id="btnDelete" onclick="<c:out value="${boardContent.bid}"/>">삭제</button>
+
 				<button type="button" class="btn btn-sm btn-warning" id="btnList">목록</button>
+				<!--
 				<button type="button" class="btn btn-sm btn-warning" id="btnTicket">티켓</button>
+				-->
 			</div>
 
 		</div>

@@ -99,7 +99,9 @@
                     <col style="width:15%;" />
                     <col style="width:15%;" />
                     <col style="width:7%;" />
+                    <!--
                     <col style="width:7%;" />
+                    -->
                     <col style="width:10%;" />
                 </colgroup>
 
@@ -109,7 +111,9 @@
                     <th>도서제목</th>
                     <th>도서설명</th>
                     <th>저자</th>
+                    <!--
                     <th>조회수</th>
+                    -->
                     <th>등록일</th>
                 </tr>
                 </thead>
@@ -130,7 +134,9 @@
                                 </td>
                                 <td><c:out value="${list.content}"/></td>
                                 <td><c:out value="${list.reg_id}"/></td>
+                                <!--
                                 <td><c:out value="${list.view_cnt}"/></td>
+                                -->
                                 <td><c:out value="${list.reg_dt}"/></td>
 
                             </tr>
