@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* CSS Document */
+.section {padding-top:100px;}
+
+.indexTitle {font-size:36px; color:#fff; font-weight: 700; text-align: center;}
+    .indexTitle span {display: block; font-size: 14px;;}
+.indexTitle2 {color:#0060c4; font-weight: bolder !important;}
+.indexTitleColor {color:#000; font-size:36px !important; display: inline-block !important; font-weight: bolder;}
+
+/*indexCon01*/
+.indexCon01 { padding:80px 0 150px 0; position:relative;}
+.indexConDeco01, .indexConDeco02 { position: absolute; top:0; min-height: 855px; width:100%; z-index:-1;}
+.indexConDeco01 {left:0px; background: url("../images/index/con01Bg01.png") no-repeat -300px -150px;}
+.indexConDeco02 {right:0px;; background: url("../images/index/con01Bg02.png") no-repeat 1050px -90px;}
+    .indexCon01 .inner {text-align: center; overflow: hidden;}
+        .popupBox, .etcBox {float: left; box-sizing: border-box; }
+        .popupBox {border-bottom-left-radius: 10px; border-top-right-radius: 10px; position:relative; margin-right:0; width:50%; padding-right:1em; padding-bottom: 1em;}
+            .popList {border-bottom-left-radius: 10px; border-top-right-radius: 10px;box-shadow: 4px 4px 10px #bbb; }
+                .popList a {display: block; height:572px;}
+                    .popList a img {border-bottom-left-radius: 10px; border-top-right-radius: 10px; width: 100%; height:100%; max-width: 100%;}
+            .popLeftBtn, .popRightBtn, .popDotBox {position:absolute;}
+            .popLeftBtn, .popRightBtn {border:0; top:50%; margin-top:-25px; background-color: transparent;}
+            .popLeftBtn {left:0;}
+            .popRightBtn {right:1.2em;}
+            .popDotBox {bottom:30px; width:100%; text-align: center;}
+                .popDot li {display: inline-block; margin:0 .2em;}
+                    .popDot li a {display: block; width:22px; height:12px; border:1px solid rgba(0,0,0,.1);  box-sizing: border-box; background-color: rgba(0,0,0,.4); border-radius: 10px;}
+                    .popDot li.popChoice a {background-color: #fff; border: 1px solid #bfbfbf;}
+
+        .etcBox {padding:0 1em 1em .2em; width:50%;}
+            .noticeBox {box-shadow: 4px 4px 10px #bbb; border-bottom-left-radius: 10px; border-top-right-radius: 10px;}
+                .noticeTab {background:url("../images/index/noticeBg.png") right no-repeat #0060c4; position: relative; padding:1em; border-top-right-radius: 10px; text-align: left;}
+                    .noticeTab li {display: inline-block; margin:0 15px;}
+                    .noticeTab li:last-child {}
+                        .noticeTab li a {display: block; color:#7c9fd9; font-size:20px; font-weight: 700;}
+                        .noticeTab li.tabChoice a {color:#fff;}
+                    .noticeMore {position: absolute; right:10px; top:20px;}
+                        .noticeMore button {background-color: transparent; border:0; cursor: pointer;}
+                .noticeList {background-color: #fff; padding:.5em 1em; border-bottom-left-radius: 10px;} 
+                    .noticeList ul {overflow: hidden; border-bottom: 1px dashed #ccc;}
+                    .noticeList ul:last-child {border-bottom:0;}
+                        .noticeList li {float: left; box-sizing: border-box; color:#8d8d8d; min-height: 36px; margin:.2em 0;}
+                        .noticeList li:first-child {width:80%; text-align: left;}
+                        .noticeList li:last-child {width:20%; text-align: right;  padding:.5em 0; font-size:14px; color:#c2c2c2;}
+                            .noticeList li a {display: block; color:#8d8d8d;  padding:.7em 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; font-size:15px;}
+                            .noticeList li a::before {content: "-"; margin:0 10px 0 5px;}
+
+            .onlineBox {margin-top:20px; display: flex; box-shadow: 4px 4px 10px #bbb; border-bottom-left-radius: 10px; border-top-right-radius: 10px;} 
+                .online, .theater {width:50%; text-align: center; background-color: #fff; }
+                    .onTitle {padding:.7em; background-color: #0060c4; line-height: 110%;;}
+                        .onTitle p {color:#fff; font-size:18px; font-weight:700;}
+                        .onTitle span {color:#4a80ce; font-size:13px;}
+                    .onCon {background-color: #fff; padding-bottom:.6em;}
+                    .online .onCon {border-bottom-left-radius: 10px;}
+                    .theater .onTitle {border-top-right-radius: 10px;}
+                    .theater .onTitle, .theater .onCon {background-color: #054b93; }
+                        .online .onCon ul {overflow: hidden; padding-top:57px;}
+                            .online .onCon ul li {width:33.3%; float:left; text-align: center;}
+                                .online .onCon ul li a {display: block;}
+                                    .online .onCon ul li a p {font-size:14px; font-weight:700; color:#232323;}
+                        .theater .onCon .theaterList {padding:1em 1em 1em 1em; text-align: center; }
+                            .theater .onCon .theaterList button {background-color: rgba(255,255,2550,.5); border:0; display: inline-block; vertical-align: middle; cursor: pointer;}
+                            .theaterList ul {background-color: rgba(255,255,2550,.5); border-top-right-radius: 10px; border-bottom-left-radius: 10px; margin:0 1em; display: inline-block; vertical-align: middle;}
+                                .theaterList ul li {padding:5px; }
+                                    .theaterList ul li a {display: block;}
+                                        .theaterList ul li a img {width: 100%; height:100%; border-top-right-radius: 10px; border-bottom-left-radius: 10px; }
+                            .theaterName {color:#fff; font-weight:700; font-size:13px;}
+
+/*indexCon02*/
+.indexCon02 {background:url("../images/index/exibitionBg.jpg"); padding:55px 0 75px 0;}
+    .exhTab {text-align: center; margin:30px 0;}
+        .exhTab li {display: inline-block;}
+            .exhTab li a {display: block; color:#fff; font-weight: 700; font-size: 24px; padding:0.3em 2.5em;  border-radius:200px; border:2px solid #fff; }
+            .exhTab li:last-child a {margin-left:-50px; padding-left:3.5em;}
+            .exhTab li:first-child a {padding-right:3.5em;}
+            .exhTab li.choiceEx a {background-color: #fff; color:#0f2478; padding:0.3em 2.5em;}
+    .exhList {position:relative;}
+        .exBtnLeft, .exBtnRight {position:absolute; top:50%; margin-top:-26px;}
+            .exBtnLeft a, .exBtnRight a {display: block; }
+            .exBtnLeft {left:0;}
+            .exBtnRight {right:0;}
+        .exBtnImg {overflow: hidden;}
+            .exBtnImg li {float:left; width:25%; box-sizing: border-box;}
+                .exBtnImg li a {display: block; text-align: center; position:relative; margin:0 1em;}
+                    .exBtnImg li a p {position:absolute; bottom:0; left:0; right:0; padding:1em 0; color:#fff; background-color: rgba(0,0,0,.5); font-weight: 700;}
+                    .exBtnImg li a img {max-width:100%; }
+
+/*indexCon03*/
+.indexCon03 {background-color: #fff; padding:55px 0 75px 0; position:relative;}
+    .indexCon03 .inner {display: flex; justify-content : center;}
+    .indexCon03 .indexTitle2 {width:15%; text-align: left;}
+        .indexCon03 .indexTitle2 p {color:#6f6f6f; font-size:15px; line-height: 120%;}
+        .indexCon03 .indexTitle2 button {background-color: #313131; color:#fff; text-align: center; border-radius: 400px; padding:.5em 2em; border:0;}
+    .indexCon03 .gallery {width:85%; overflow: hidden; text-align: right;}
+        .gallery li {display: inline-block; vertical-align: top; width:30%;}
+            .gallery li a {display: block; margin:1em; border-bottom-left-radius: 10px; border-top-right-radius: 10px; text-align: center; position:relative;  box-shadow:4px 4px 15px #ccc;}
+                .gallery li a img {height:204px; width: 100%; border-top-right-radius: 10px; display: block;}
+                .galleryTitle { background-color: #0060c4; color:#fff; font-weight:700; border-radius: 400px; padding:.45em 2em; display: inline-block; margin:0 auto; margin:1em 0 .8em 0;}
+                .galleryDate {font-size:16px; color:#313131; padding-bottom:1em; font-weight: 700; }
+                .galleryDate::before {content: url("../images/index/galleyDate.png"); display: inline-block; vertical-align: middle; margin-right:5px;}
+                .gallery li button {background: rgba(0,0,0,.5); display:block; position:absolute; right:0; top:0; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border:0; padding:.8em;}
+                    .gallery li button img {max-width: none; height:auto;}
+
+
+/*indexCon04*/
+.indexCon04 {background:url("../images/index/informBg2.png") top center; padding:55px 0 75px 0; position:relative;}
+    .indexCon04Deco {background-image: url("../images/index/informBg.png") ; background-position:center; background-size: cover; position:absolute; bottom:-124px; height:371px; width:100%; }
+    .infoList {overflow: hidden; margin:55px 0 65px 0;}
+        .infoList li {float:left; width:20%; text-align: center;}
+            .infoList li a {display: block;}
+                .infoList li a p.infoImg {min-height: 120px; text-align: center; margin:0;}
+                
+                .infoList li:first-child a p.infoImg {background: url("../images/index/infoIcon01.png") no-repeat center; }
+                .infoList li:nth-child(2) a p.infoImg {background: url("../images/index/infoIcon02.png") no-repeat center; }
+                .infoList li:nth-child(3) a p.infoImg {background: url("../images/index/infoIcon03.png") no-repeat center; }
+                .infoList li:nth-child(4) a p.infoImg {background: url("../images/index/infoIcon04.png") no-repeat center; }
+                .infoList li:last-child a p.infoImg {background: url("../images/index/infoIcon05.png") no-repeat center; }
+
+                
+                .infoList li:first-child a:hover p.infoImg, .infoList li:first-child a:active p.infoImg {background: url("../images/index/infoIcon01_on1.png") no-repeat center; }
+                .infoList li:nth-child(2) a:hover p.infoImg, .infoList li:nth-child(2) a:active p.infoImg {background: url("../images/index/infoIcon02_on1.png") no-repeat center; }
+                .infoList li:nth-child(3) a:hover p.infoImg, .infoList li:nth-child(3) a:active p.infoImg {background: url("../images/index/infoIcon03_on1.png") no-repeat center; }
+                .infoList li:nth-child(4) a:hover p.infoImg, .infoList li:nth-child(4) a:active p.infoImg {background: url("../images/index/infoIcon04_on1.png") no-repeat center; }
+                .infoList li:last-child a:hover p.infoImg, .infoList li:last-child a:active p.infoImg {background: url("../images/index/infoIcon05_on1.png") no-repeat center; }
+
+                .infoList li a p {color:#fff; font-weight: 700; font-size:18px; margin-top:1em;}
+                .infoList li a img {max-width: 100%;}
+
+
+/*반응형*/
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1199.98px) {
+     
+.indexTitle {font-size:32px; }
+.indexTitle span {font-size: 13px;;}
+.indexTitleColor {font-size:32px !important;}
+.indexCon03 .indexTitle2 p {font-size:13px;}
+
+    .indexCon01 { padding:50px 0 70px 0;}
+    .popupBox {width:40%; }
+        .popList a {height:442px;}
+    .etcBox {width:60%;}
+                    .noticeTab li a {font-size:18px; }
+            .noticeList { padding:.5em 1em; } 
+                .noticeList ul:last-child {display: none;}
+                .noticeList ul:nth-child(4) {display: none; }
+                .noticeList ul:nth-child(3) {border-bottom:0; }
+                    .noticeList li {min-height: auto; margin:.2em 0;}
+                    .noticeList li:last-child {font-size:13px;}
+                        .noticeList li a {font-size:14px;}
+        .onlineBox {margin-top:15px; } 
+                .onTitle {padding:.5em .5em .3em .5em; }
+                    .onTitle p {font-size:17px;}
+                    .onTitle span {font-size:12px;}
+                    .online .onCon ul {padding-top:40px;}
+                    .theater .onCon .theaterList {padding:.5em; }
+                            .theaterList ul li {padding:5px; }
+
+}
+
+@media (max-width: 991.98px) { 
+    .popList a {height:360px;}
+   
+    /*indexCon02*/
+.indexCon02 {padding:50px 0 50px 0;}
+    .exhTab {margin:20px 0 30px 0;}
+        .exhTab li a {padding:0.2em 2em;}
+        .exhTab li.choiceEx a {padding:0.2em 2em;}
+        .exBtnImg li { width:33.3%;}
+        .exBtnImg li:last-child {display: none;}
+
+    /*indexCon03*/
+.indexCon03 {padding:50px 0 50px 0; }
+    .indexCon03 .indexTitle2 {width:20%; }
+    .indexCon03 .gallery {width:80%;}
+            .gallery li {width:48%;}
+            .gallery li:last-child {display: none;}
+ 
+/*indexCon04*/
+.indexCon04 {padding:50px 0 50px 0; }           
+            
+}
+
+@media (max-width: 767.98px) {
+    /*indexCon01*/
+    .indexCon01 .inner {height:530px;}
+        .popList a {height:272px;}
+            .noticeList ul:last-child {display: block;}
+            .noticeList ul:nth-child(4) {display: block; }
+            .noticeList ul:nth-child(3) {border-bottom: 1px dashed #ccc;}
+                .noticeList li {min-height: auto; margin:.1em 0;}
+        .onlineBox {position:absolute; left:0; right:0; margin-top:0; top:290px; margin-right:1em; margin-left:.1em;}    
+
+    /*indexCon02*/
+    .exhTab {margin:10px 0 20px 0;}
+    .exhTab li a {font-size:17px;}
+        .exBtnImg li { width:50%;}
+        .exBtnImg li:nth-child(3) {display: none;} 
+}
+	
+@media (max-width: 575.98px) {
+    /*indexCon01*/
+    .indexCon01 .inner {height:auto; }
+        .popupBox {width:100%; padding-right: 0; box-shadow: none; padding:0;}
+            .popList a {height:auto;}
+        .etcBox {width:100%; padding:1em 0; box-shadow: none}
+            .noticeBox {box-shadow: none; border:1px solid #ccc; border-top:0;}
+            .onlineBox {position:relative; left:auto; right:auto; margin-top:1em; top:auto; margin-right:0; margin-left:0; display: block; box-shadow: none;}  
+                .online, .theater {width:100%; box-shadow: none}
+                    .onTitle {border-top-right-radius: 10px;}
+                    .theater .onCon {border-bottom-left-radius: 10px;}
+                    .online .onCon {border:1px solid #ccc; border-top:0;}
+                            .online .onCon ul {padding:1em 0;}
+                .theater {margin-top:1em;}
+ 
+    /*indexCon02*/
+            .exBtnLeft, .exBtnRight {margin-top:-20px;}
+            .exBtnLeft a, .exBtnRight a {width:40px; height: 40px;}
+                .exBtnLeft a img, .exBtnRight a img {max-width: 100%;}
+
+    /*indexCon03*/
+    .indexCon03 .inner {display: block;}
+    .indexCon03 .indexTitle2 {width:100%; text-align: center; }
+    .indexCon03 .gallery {width:100%;}
+            .gallery li {width:100%;}
+            .gallery li:nth-child(2) {display: none;}      
+ 
+    /*indexCon04*/
+.indexCon04 {padding:30px 0 60px 0; background-size: cover;}         
+    .infoList {margin:10px 0 35px 0; text-align: center;}
+        .infoList li {display: inline-block; float:none; width:30%; vertical-align: top; padding:0 .2em;}
+        .infoList li a p.infoImg {background-size: contain !important;}
+            .infoList li a {margin:.3em 0em;}
+                .infoList li a p {font-size:14px; margin-top:0em;}
+
+}
+	
+@media (max-width: 379.98px) {
+
+}

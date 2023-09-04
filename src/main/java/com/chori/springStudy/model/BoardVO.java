@@ -1,14 +1,14 @@
 package com.chori.springStudy.model;
 
 import jdk.jfr.Timestamp;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
+
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class BoardVO {
     public int bid;
     public String cate_cd;
@@ -17,6 +17,8 @@ public class BoardVO {
     public String tag;
     public int view_cnt;
     public String reg_id;
+    public String icode;
+    public String cmd;
 
     //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -26,8 +28,6 @@ public class BoardVO {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     public String edit_dt;
 
-    private String filename;
-    private String filepath;
 
 
 

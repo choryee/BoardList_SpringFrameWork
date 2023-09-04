@@ -2,6 +2,7 @@ package com.chori.springStudy.service;
 
 import com.chori.springStudy.model.BoardVO;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -10,6 +11,8 @@ public interface BoardService {
     public List<BoardVO> getBoardList() throws Exception;
 
     public BoardVO getBoardContent(int bid) throws Exception;
+
+    List<Map<String, Object>> getBoardContent1(Map<String, Object> params) throws Exception;
 
     public BoardVO detailBoard(int bid) throws Exception;
 

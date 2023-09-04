@@ -1,4 +1,51 @@
 
+출처:
+https://freehoon.tistory.com/
+https://freehoon.tistory.com/97    <-- 여기서 시작.
+https://freehoon.tistory.com/102
+[훈잇 블로그:티스토리]
+--------------
+첨에는 spring framework .xml세팅 헤매다가 hello world찍는 거 한 후, 게시판 만들기 이어서 하고 있음.
+
+주소
+http://localhost:8080/board/getBoardList
+-----------
+
+$('#btn').val(' ');에서 시작. <--이렇게 하면, val('')에 값을 넣는 것.  $('#btn').val('); <--이건 값을 가져오는 것. 헷칼리지 마라
+<c: out value="${list.id}"> 를 추가한것. 밑.
+$('#btn').val('<c: out value="${list.id}"> ');
+
+
+
+
+
+230116
+<h1>HTTP Status 403 -
+Could not verify the provided CSRF token
+because your session was not found.
+</h1>
+	시큐리티 계속 에러남. security-context.xml 주석처리해도 에러남.
+-시큐리티는 pom.xml, security-context.xml,등에 박혀있어 주석해도, 에러남.
+
+	HTTP Status 403 - Invalid CSRF Token 'null' was found on the request parameter '_csrf' or
+	header 'X-CSRF-TOKEN'.
+-->>해결
+다른 것없이, form밑에
+<form name="form" id="form" role="form" method="post" action="${pageContext.request.contextPath}/board/saveBoard">
+      <input type="hidden" name="${ _csrf.parameterName }" value="${ _csrf.token }">
+      위 추가하면 끝.
+
+enc-type="multipart/form-data"
+<input type="file">
+role="main"
+role="form"
+
+https://tlatmsrud.tistory.com/77
+
+---------
+http://localhost:8080/board/getBoardList
+
+
 HeidiSql에서 root로 로그인
 mydb/tbl_board
 
@@ -7,16 +54,14 @@ create table tbl_board(
   cate_cd  varchar(20)   not null comment '게시글 카테고리',
   title    varchar(200)  not null comment '제목',
   content  text          not null comment '게시글',
-  tag      varchar(1000) null comment '태그',
+  tag      varchar(1000) null comment '태그',s
   view_cnt int default 0 not null comment '카운트',
   reg_id   varchar(45)   not null comment '작성자',
   reg_dt   date          not null comment '작성일',
   edit_dt  date          not null comment '수정일'
 );
 
-첨에는 spring framework .xml세팅 헤매다가 hello world찍는 거 한후, 게시판 만들기 이어서 하고 있음.
 
-http://localhost:8080/board/getBoardList
 
 ----------------------
 resources밑에는 설정함.
@@ -35,5 +80,3 @@ web관련 폴더
 webapp/WEB-INF/views에
 
 
-출처: https://freehoon.tistory.com/102
-[훈잇 블로그:티스토리]

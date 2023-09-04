@@ -5,6 +5,7 @@ import com.chori.springStudy.model.BoardVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,6 +31,11 @@ public class BoardServiceImpl implements BoardService{
     }
 
     @Override
+    public List<Map<String, Object>> getBoardContent1(Map<String, Object> params) throws Exception {
+                return boardDAO.getBoardContent1(params);
+    }
+
+    @Override
     public BoardVO detailBoard(int bid) throws Exception {
         return boardDAO.detailBoard(bid);
     }
@@ -48,6 +54,7 @@ public class BoardServiceImpl implements BoardService{
 
     @Override
     public int updateBoard(BoardVO boardVO) throws Exception {
+        boardDAO.updateBoard(boardVO);
         return 0;
     }
 
